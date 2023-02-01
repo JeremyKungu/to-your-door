@@ -38,7 +38,7 @@ function SignUp() {
     <div className='signup-container'>
         <div className='signup-header'>
             <h3>Hi there! Order today</h3>
-            <h1>To Your Door</h1>
+            <h1>To Your Door App</h1>
         </div>
 
         <div className='main-content'>
