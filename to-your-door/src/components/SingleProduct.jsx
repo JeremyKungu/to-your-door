@@ -2,12 +2,13 @@ import React from 'react'
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import "./SingleProduct.css";
+import { CartState } from "../Context";
 
 function SingleProduct({ foodData }) {
-    // const {
-    //     state: { cart },
-    //     dispatch,
-    // } = CartState();
+    const {
+        state: { cart },
+        dispatch,
+    } = CartState();
     console.log(foodData)
   return (
     <div className='single-food-card'>
