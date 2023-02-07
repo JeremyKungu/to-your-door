@@ -6,6 +6,8 @@ import Home from './components/Home';
 import Restaurant from './components/Restaurant';
 import Login from './components/Login';
 import SignUp from './components/SignUp';
+import Food from './components/Food';
+import ProtectedRoutes from "./ProtectedRoutes"
 
 function App() {
   const [user, setUser] = useState("User");
@@ -14,9 +16,14 @@ function App() {
   {/* <NavBar /> */}
   <Routes>
     <Route path="/" element={<Home />} />
-    <Route path='/restaurant' element={<Restaurant />} />
+    <Route element={<ProtectedRoutes />}>
+      <Route path='/restaurant' element={<Restaurant />} />      
+      <Route path="/food" element={<Food />} />
+    </Route>
+
     <Route path='/login' element={<Login setUser={setUser}/>} />
     <Route path='/signup' element={<SignUp />} />
+    
   </Routes>
   </>
   )
